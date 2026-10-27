@@ -86,4 +86,95 @@
 // let greeting = greetFunc;
 // greeting();
 
-console.log(parseInt("10"));
+// console.log(parseInt("10"));
+
+// 콜백함수
+// function parentFunction(callBack) {
+//   //   let callBack = childFunc
+//   console.log("parent");
+//   callBack();
+// }
+
+// function childFunc() {
+//   console.log("child");
+// }
+
+// parentFunction(childFunc);
+
+// function repeat(count) {
+//   for (let idx = 0; idx < count; idx++) {
+//     console.log(idx + 1);
+//   }
+// }
+
+// repeat(5);
+
+// function repeat(count) {
+//   for (let idx = 0; idx < count; idx++) {
+//     console.log(idx + 1);
+//   }
+// }
+
+// function repeatDouble(count) {
+//   for (let idx = 0; idx < count; idx++) {
+//     console.log((idx + 1) * 2);
+//   }
+// }
+
+// repeatDouble(5);
+
+// function repeat(count, callBack) {
+//   for (let idx = 0; idx < count; idx++) {
+//     callBack(idx + 1);
+//   }
+// }
+
+// function origin(count) {
+//   console.log(count);
+// }
+
+// repeat(5, origin);
+
+// function repeat(count, callBack) {
+//   for (let idx = 0; idx < count; idx++) {
+//     callBack(idx + 1);
+//   }
+// }
+
+// function origin(count) {
+//   console.log(count);
+// }
+
+// function double(count) {
+//   console.log(count * 2);
+// }
+
+// repeat(5, double);
+
+// 화살표 함수
+// let funcA = (매개변수) =>  { 수행할 코드 }
+
+// let greeting = (name) => `hello ${name}`;
+
+// const greetingText = greeting("이정환");
+
+// console.log(greetingText);
+
+let isConfirm = false;
+
+function confirm(onYes, onNo) {
+  //   let onYes = () => console.log("승인")
+  if (isConfirm) onYes();
+  else onNo();
+}
+
+confirm(
+  () => console.log("승인"),
+  () => console.log("거부"),
+);
+
+// if (isConfirm) {
+//   onYes();
+// } else {
+//   onNo();
+// }
